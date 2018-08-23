@@ -1,0 +1,164 @@
+Hello! If you're reading this you're probably in Mr. Hanson's 6th-period APCS
+class. If you're a beginner at Java programming I hope this cheet sheet comes in
+useful. It lists most common Java commands and syntax and its usage. Good luck!
+
+VARIABLES
+---------
+The most basic unit in a Java program is the variable.
+
+In Java, variables are used to hold either values or references to objects -- much like
+tiny little business cards. Each variable has several properties, including data
+type, name, and value.
+
+To define a variable, this is the syntax you use:
+
+<data type> <name> = <value>;
+
+e.g int myFirstInt = 5;
+
+Data Types
+----------
+
+Primitive data types are the simplest. They can hold numbers and Boolean
+(true/false) conditions.
+
+int is the Java integer data type. It can hold signed (positive or negative)
+integers. It can hold fairly large values, but be warned that there *is* a limit
+to int's capacity.
+
+e.g int myInteger = 123;
+
+double is the Java floating-point (decimal) data type. It can hold decimal
+values to many significant figures (there's a limit to this as well, but I doubt
+it'll be a problem).
+
+e.g double myDecimalNumber = 3.1415926;
+
+boolean is the Java boolean data type. It can hold one of two states - true and
+false. 
+
+e.g boolean areWeThereYet = false;
+
+
+You might have noticed that we use similar syntax to create objects in Java, but
+that's a topic for another section. 
+
+e.g double myDecimalNumber = 3.1415926;
+
+boolean is the Java boolean data type. It can hold one of two states - true and
+false. 
+
+e.g boolean areWeThereYet = false;
+
+
+You might have noticed that we use similar syntax to create objects in Java, but
+that's a topic for another section. Just make sure that the data type matches
+the object's class (if this is Greek to you, don't worry about it yet.)
+
+Naming
+------
+
+Java is pretty flexible with its variable naming standards, but there are a few
+restrictions to variable names.
+
+Rule 1: Java variable names cannot start with numbers and may only contain
+letters (uppercase and lowercase), numbers, and the underscore '_' character.
+
+Rule 2: Java variable names cannot conflict with keywords in the language -- e.g
+if, while, int, boolean, double, class, static -- etc. 
+
+Good variable names:
+variable1   Variable2   Variable_3  Var1abl3_5_
+
+Bad variable names:
+1variable (starts with numbers!)    My Variable (has space in it)   while
+(conflicts with Java keyword)
+
+In general, Java programmers like to use something called camelCase when naming
+variables -- first letter lowercase, then later letters capitalized.
+
+e.g thisIsAVariable     camelCaseInteger
+
+It looks nice that way and is very aesthetic. Please follow Java naming
+conventions to increase your code's curb appeal.
+
+
+OPERATORS
+---------
+
+Ok, we've defined a couple ints, booleans, and doubles. What do we do with them?
+We can do math with them. Like a graphing calculator, except a couple thousand
+times faster. Here is a little example to familiarize you with operators:
+
+int height = 5;
+int width = 5;
+int perimeter = (2 * height) + (2 * width);
+int area = height * width;
+
+In short, all the standard math operators are available. 
+
++ - add
+- - subtract
+* - multiply
+/ - divide (SEE CAVEAT)
+
+Also, Java and many other languages have something called a modulo operator - %.
+If you remember elementary-school math, this operator gets the remainder of a
+division operation. 
+
+int remainder = 5 % 3; // Remainder is set to 2
+
+DIVISION CAVEAT:
+Try this example. What do you think it should print? What did it actually print?
+
+double divisionMystery = 5 / 2; // We're expecting a decimal result, so we take
+                                // care to store result into a double. 
+System.out.println(divisionMystery);
+
+Surprised? So was I when I first saw this result.
+Spoiler alert: It prints 2.
+Why? Because Java treats the division operation as a division of two integers,
+it discards any decimal places and just returns the integer. To solve this
+problem, we should force the division to use decimals:
+
+double divisionMysteryResolved = 5 / 2.0; // The double is now, correctly, 2.5
+
+Boolean Operators
+-----------------
+
+In addition to working with numbers, Java permits working with boolean logic.
+That is, we can do "math" with true/false values. 
+
+These are your operators:
+
+|| - OR operator
+&& - AND operator
+! - NOT operator
+
+For example, what would bool1 and bool2 be set to?
+
+boolean a = true;
+boolean b = false;
+boolean bool1 = (a && b);
+boolean bool2 = (a || b);
+
+bool1 would be false and bool2 would be true. Why? Because the OR operator sets
+the result true when either of the operands are true, while the AND operator
+sets the result true only when BOTH operands are true.
+
+The NOT operator "flips" a boolean.
+
+boolean a = false;
+boolean b = !a;
+
+a will be set to true -- the opposite of false is true.
+
+You can chain operators as well.
+
+boolean c = (a && b) || (!a || b);
+
+This is about it for operators. Now that we can do some basic math, onwards and
+forwards to CONDITIONALS!
+
+
+

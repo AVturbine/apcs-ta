@@ -1,0 +1,92 @@
+JAVA CHEAT SHEET
+----------------
+
+
+DATA TYPES
+
+int - integer number
+double - decimal number
+boolean - true/false value
+
+CONDITIONALS
+
+//Basic if/elseif/else block.
+
+if (condition) {
+    //doSomething
+} else if (otherCondition) {
+    //doSomethingElse
+} else {
+    //doOtherThings
+}
+
+//Switch block -- used for many-case decisions.
+
+switch(number) {
+    case 1:
+        //doSomething
+        break; // VERY IMPORTANT
+    case 2:
+        //doSomehingElse
+        break;
+    //...
+    case default:
+        //doLastResort
+        break;
+}
+
+LOOPS
+
+for(int counter = 0; counter < numTimesToLoop; counter++) {
+    System.out.println(counter); //Whatever you want to put in the loop
+}
+
+while (condition) {
+    //doSomething
+    //makeSureConditionCanChange
+    //reallyMakeSureYouDon'tDoInfiniteLoop
+}
+
+break; //breaks out of a loop. Only way to stop a for loop early.
+continue; //skips to next loop iteration, e.g counter would skip from 5 to 7.
+
+FUNCTIONS
+
+// Non-void function - returns a value
+int myFunc(int arg1, int arg2, boolean abc) {
+    if (abc) {
+        return arg1 + arg2;
+    } else {
+        return arg1 * arg2;
+    }
+}
+
+//Calling the function:
+int result = myFunc(1, 2, true);
+
+
+
+// Void function - doesn't return a value
+void myFunc2(String name) {
+    System.out.println(name);
+}
+
+GETTING INPUT FROM USER
+
+// From the console, using Scanner
+Scanner s = new Scanner(System.in);
+
+//then
+//to get an INTEGER
+int userInputInteger = s.nextInt();
+
+//or, to get a line of text:
+String userInputString = s.nextLine();
+
+
+//Using JOptionPane:
+String userInputString = JOptionPane.showInputDialog(null, "This is a sample
+JOptionPane. Enter a string: ");
+
+That's most of what you need to know for a while. Good luck in APCS!
+You can do it!
